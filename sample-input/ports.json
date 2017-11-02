@@ -1,3 +1,4 @@
 {
-"tolerance":"10"
+"tolerance":"30",
+"confidence":"20"
 }
