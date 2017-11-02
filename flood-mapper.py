@@ -23,16 +23,15 @@ else:
     string_ports = None
 
 if string_ports:
-
     tolerance = float(string_ports.get('tolerance', '50'))
-    min_size = float(string_ports.get('min_size', '100'))
+    min_size = float(string_ports.get('min_size', '1000'))
     min_width = float(string_ports.get('min_width', '10'))
-
+    confidence = float(string_ports.get('confidence', '1'))
 else:
-
     tolerance = 50.0
-    min_size = 100.0
+    min_size = 1000.0
     min_width = 10.0
+    confidence = 1.0
 
 # Create output directory
 output_dir = os.path.join(output_ports_location, 'image')
@@ -43,10 +42,11 @@ os.chdir(output_dir)
 # Run flood mapper protocol
 p = protogen.Interface('crime', 'flood_water_mapper')
 p.crime.flood_water_mapper.tolerance = tolerance
-p.crime.flood_water_mapper.moisture = 1
-p.crime.flood_water_mapper.binary_output = True
+p.crime.flood_water_mapper.moisture = confidence
 p.crime.flood_water_mapper.min_size = min_size
 p.crime.flood_water_mapper.min_width = min_width
+p.crime.flood_water_mapper.binary_output = True
+p.image = image
 p.image_config.bands = range(1, no_bands+1)
 
 p.execute()
