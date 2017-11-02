@@ -1,5 +1,5 @@
 {
-    "name": "lulc",
+    "name": "flood-mapper",
     "description": "A GBDX task that maps flood water on 4-band or 8-band atmospherically compensated DigitalGlobe imagery.",
     "properties": {
         "isPublic": false,
