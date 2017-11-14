@@ -26,12 +26,12 @@ if string_ports:
     tolerance = float(string_ports.get('tolerance', '50'))
     min_size = float(string_ports.get('min_size', '1000'))
     min_width = float(string_ports.get('min_width', '10'))
-    confidence = float(string_ports.get('confidence', '1'))
+    confidence = float(string_ports.get('confidence', '15'))
 else:
     tolerance = 50.0
     min_size = 1000.0
     min_width = 10.0
-    confidence = 1.0
+    confidence = 15.0
 
 # Create output directory
 output_dir = os.path.join(output_ports_location, 'image')

@@ -5,7 +5,7 @@
         "isPublic": false,
         "timeout": 7200
     },
-    "version": "0.0.1",
+    "version": "0.0.2",
     "inputPortDescriptors": [
         {
             "name": "image",
@@ -34,7 +34,7 @@
         {
             "name": "confidence",
             "type": "string",
-            "description": "Minimum confidence to determine flood water pixel. Default is 1.",
+            "description": "Minimum confidence to determine flood water pixel. Default is 15.",
             "required": false
         }
     ],
