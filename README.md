@@ -36,7 +36,7 @@ wf.execute()
 | tolerance | string | A percentage value. High tolerance picks up everything with a detectable concentration of moisture or surface water. Intermediate tolerance picks up water-saturated soils and other materials. Low tolerance picks up only impure water bodies. Default is 50. | False |
 | min_size | string | Minimum target area in m2. Default is 1000. | False |
 | min_width | string | Minimum target width in m2. Default is 10. | False |
-| confidence | string | Minimum confidence to determine flood water pixel. Default is 1. | False |
+| confidence | string | Minimum confidence to determine flood water pixel. Default is 15. | False |
 
 ## Output ports
 
